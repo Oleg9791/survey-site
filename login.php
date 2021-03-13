@@ -36,8 +36,10 @@ if (empty($result)) {
 
 // Выдает временную куку пользователю, который вошел на 300 секунд
 
-setcookie("id", $result["id_user"], time() + 300, "/");
 $mysql->close();
+setcookie("id", $result["id_user"], time() + 300, "/");
 
-header("Location: correct.php");
+
+
+//header("Location: correct.php");
 

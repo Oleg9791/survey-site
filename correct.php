@@ -9,7 +9,20 @@
 </head>
 <body>
 <!--Выводит сообщение об успешном входе и дает возможность пройти опрос-->
-<h1>Вы успешно вошли !!!</h1>
-<a href="opros.php" class="btn btn-warning">Пройти опрос</a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <h1>Вы успешно вошли !!!</h1>
+            <a id="opros" href="opros.php" class="btn btn-warning">Пройти опрос</a>
+
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

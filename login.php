@@ -3,8 +3,8 @@
 
 if (empty($_POST["login"] or $_POST["login"] = "")
     and empty($_POST["password"] or $_POST["password"] = "")) {
-    echo "Все поля должны быть заполнены <br>";
-    echo "<a href='login.html'>Введите верные данные</a>";
+    echo "<h1 style='font-size: 220%; text-align: center; margin-top: 100px; font-family: monospace; color: #ff0000'>Все поля должны быть заполнены !!!</h1> <br><br><br>";
+    echo "<button style='margin: 100px 0px 0px 680px; height: 40px; background-color: green; text-align: center;' ><a style='text-decoration: none; color: aliceblue'  href='login.html' class='btn btn-success'>Введите верные данные</a></button>";
     die();
 }
 
@@ -26,12 +26,18 @@ $result = $query->fetch_assoc();
 // Проверка на корректность логина и пароля в базе данных
 if (empty($result)) {
 
-    echo "Такой пользователь не существует";
+    echo "<h1 style='font-size: 220%; text-align: center; margin-top: 100px; font-family: monospace; color: #ff0000'>Такой пользователь не существует !!!</h1> <br><br><br>";
+    echo "<button style='margin: 100px 0px 0px 680px; height: 40px; background-color: green; text-align: center;' ><a style='text-decoration: none; color: aliceblue'  href='login.html' class='btn btn-success'>Вернуться к регистрации</a></button>";
+
+
     exit();
 }
-// Выдает временную куку пользователю, который вошел на 30 секунд
 
-setcookie("id", $result["id_user"], time() + 30, "/");
+
+// Выдает временную куку пользователю, который вошел на 300 секунд
+
+setcookie("id", $result["id_user"], time() + 300, "/");
 $mysql->close();
 
-header("Location: correct.html");
+header("Location: correct.php");
+

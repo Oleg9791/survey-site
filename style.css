@@ -57,3 +57,22 @@ body.login {
 input[type="radio"] {
     margin-right: 10px ;
 }
+#middle{
+    display: block;
+    margin-left: -1200px;
+    margin-top: 180px;
+
+}
+#opros{
+    margin-top: 100px;
+}
+#thanks{
+    background-image: url("img/tax2.png");
+    /*background-size: 1400px;*/
+    background-repeat: no-repeat;
+    background-position: 35% 350px;
+
+}
+#than{
+    margin-bottom: 90px ;
+}

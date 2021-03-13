@@ -12,13 +12,26 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-// Проверка на хотя бы одного невыбранного варианта ответа на вопрос и возможностью вернуться к опросу
-if (empty($_POST["q1"]) or empty($_POST["q2"]) or empty($_POST["q3"]) or empty($_POST["q4"])
-    or empty($_POST["q5"])) {
-    echo "Выберите варианты ответа для всех вопросов <br> <a class='btn btn-secondary' href='opros.php'>Вернуться к опросу</a>";
-}
-?>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <?php
+            // Проверка на хотя бы одного невыбранного варианта ответа на вопрос и возможностью вернуться к опросу
+            if (empty($_POST["q1"]) or empty($_POST["q2"]) or empty($_POST["q3"]) or empty($_POST["q4"])
+                or empty($_POST["q5"])) {
+                echo "<h1 style='font-size: 220%; margin-top: 100px; font-family: monospace; color: #ff0000'>Выберите варианты ответа для всех вопросов </h1><br> <a class='btn btn-secondary' href='opros.php'>Вернуться к опросу</a>";
+            }
+            ?>
+
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
 

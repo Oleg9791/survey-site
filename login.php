@@ -41,5 +41,5 @@ setcookie("id", $result["id_user"], time() + 300, "/");
 
 
 
-//header("Location: correct.php");
+header("Location: correct.php");
 

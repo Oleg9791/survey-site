@@ -97,7 +97,9 @@ span#q_1,#q_2,#q_3,#q_4,#q_5{
 }
 b{
     font-size: 17px;
-    color: #278028;
+    color: #111010;
     font-family: 'Permanent Marker', cursive;
 }
-
+#subtest{
+    margin-left: 450px;
+}

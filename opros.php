@@ -18,9 +18,9 @@
 <!-- Форма опроса пользователя,который прошел регитрацию и выполнил вход-->
 <div class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col-1">
         </div>
-        <div class="col-sm">
+        <div class="col-10">
             <form action="checkopros.php" method="post">
                 <div id="q1"><span><b>1. Как часто Вы пользуетесь услугами такси?</b></span><br>
                     <input type="radio" class="form-check-input mt-0" aria-label="Radio button for following text input"
@@ -80,11 +80,11 @@
                 </div>
                 <br>
 
-                <input type="submit" class="btn btn-info" value="Отправить">
+                <input type="submit" class="btn btn-info" id="subtest" value="Отправить">
             </form>
 
         </div>
-        <div class="col-sm">
+        <div class="col-1">
         </div>
     </div>
 </div>

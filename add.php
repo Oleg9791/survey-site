@@ -9,12 +9,8 @@ if (empty($_POST["name"] or $_POST["name"] = "") or empty($_POST["login"] or $_P
 $name = $_POST["name"];
 $login = $_POST["login"];
 $password = $_POST["password"];
-// Хэширование пароля перед записью в базу данных с использованием соли
-$password = md5($password . "nbhgujl");
-// Подключение к базе данных
-$mysql = new mysqli("127.0.0.1", "root", "root", "user_bd", 3306);
-// Запрос к базе данных на сохранение введенных имени, логина и пароля в соответствующие поля таблицы базы данных
-$mysql->query("INSERT INTO `usersdata` (`name`, `login`, `password`) VALUES ('$name', '$login', '$password')");
-$mysql->close();
-
+$recording = json_decode(file_get_contents("registorData.json"));
+$recording[] = ['login' => $_POST["login"], 'password' => $_POST["password"], 'name' => $_POST["name"]];
+file_put_contents("registorData.json", json_encode($recording));
+//print_r($recording);
 header("Location: thanks1.php");
